@@ -1,0 +1,122 @@
+{
+  "games": [
+    {
+      "slug": "akropolis",
+      "title": "Akropolis",
+      "description": "Akropolis est un jeu de stratégie simple avec des éléments en 3D, où vous devrez gagner du prestige en construisant les meilleures cités au cœur de l'antique Méditerranée.",
+      "to": "/jeu/akropolis",
+      "initiales": "Akr",
+      "color": "#3B82F6",
+      "min": 2,
+      "max": 4,
+      "items": [
+        {
+          "title": "Habitation (Bleu)",
+          "description": "Contient les éléments de jeu."
+        },
+        {
+          "title": "Marché (Jaune)",
+          "description": "Permet de gagner des ressources."
+        },
+        {
+          "title": "Caserne (Rouge)",
+          "description": "Permet de gagner des points de victoire."
+        },
+        {
+          "title": "Temple (Violet)",
+          "description": "Permet de gagner des points de victoire."
+        },
+        {
+          "title": "Parc (Vert)",
+          "description": "Permet de gagner des points de victoire."
+        },
+        {
+          "title": "Pierres",
+          "description": "Permet de construire des bâtiments."
+        }
+      ]
+    },
+    {
+      "slug": "sur-les-traces-de-darwin",
+      "title": "Sur les traces de Darwin",
+      "description": "Sur les Traces de Darwin est un jeu familial pour 2 à 5 joueurs où des naturalistes complètent leur carnet en sélectionnant des tuiles Animal et Personnage depuis le plateau commun de Voyage.",
+      "to": "/jeu/sur-les-traces-de-darwin",
+      "initiales": "Dwn",
+      "color": "#22C55E",
+      "min": 2,
+      "max": 5,
+      "items": [
+        {
+          "title": "Oiseaux",
+          "description": "Contient les éléments de jeu."
+        },
+        {
+          "title": "Cartes Bonus",
+          "description": "Permet de gagner des points de victoire."
+        },
+        {
+          "title": "Objectifs de manche",
+          "description": "Permet de gagner des points de victoire."
+        },
+        {
+          "title": "Oeuf",
+          "description": "Permet de gagner des points de victoire."
+        },
+        {
+          "title": "Nourriture stockée",
+          "description": "Permet de gagner des points de victoire."
+        },
+        {
+          "title": "Carte recouverte",
+          "description": "Permet de gagner des points de victoire."
+        }
+      ]
+    },
+    {
+      "slug": "harmonies",
+      "title": "Harmonies",
+      "description": "Dans Harmonies, construisez des paysages en plaçant des jetons de couleur et créez des habitats pour vos animaux.",
+      "to": "/jeu/harmonies",
+      "initiales": "Hrm",
+      "color": "#F59E0B",
+      "min": 2,
+      "max": 4
+    },
+    {
+      "slug": "winspan",
+      "title": "Winspan",
+      "description": "Wingspan est un jeu de collection dans lequel les joueurs incarnent des amoureux d'oiseaux, chercheurs, observateurs, ornithologues ou collectionneurs, ayant pour objectif d'aménager la plus belle des volières.",
+      "to": "/jeu/winspan",
+      "initiales": "Wsp",
+      "color": "#F472B6",
+      "min": 1,
+      "max": 5,
+      "items": [
+        {
+          "title": "Oiseaux",
+          "description": "Contient les éléments de jeu."
+        },
+        {
+          "title": "Cartes Bonus",
+          "description": "Permet de gagner des points de victoire."
+        },
+        {
+          "title": "Objectifs de manche",
+          "description": "Permet de gagner des points de victoire."
+        },
+        {
+          "title": "Oeuf",
+          "description": "Permet de gagner des points de victoire."
+        },
+        {
+          "title": "Nourriture stockée",
+          "description": "Permet de gagner des points de victoire."
+        },
+        {
+          "title": "Carte recouverte",
+          "description": "Permet de gagner des points de victoire."
+        }
+      ]
+    }
+  ]
+}
