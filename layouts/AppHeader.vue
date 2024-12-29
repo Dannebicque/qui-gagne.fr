@@ -40,14 +40,4 @@ const links = [{
       </a>
     </template>
   </Menubar>
-
-<!--  <UHeader :links="links">-->
-<!--    <template #logo>-->
-<!--      Qui gagne ? <UBadge-->
-<!--        label="0.1"-->
-<!--        variant="subtle"-->
-<!--        class="mb-0.5"-->
-<!--      />-->
-<!--    </template>-->
-<!--  </UHeader>-->
 </template>
