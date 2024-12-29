@@ -1,15 +1,15 @@
 <template>
-  <h1>Accueil</h1>
 
-  <PageHeader title="Accueil"
-              description="Bienvenue sur Game Calculator, un outil pour calculer les scores de vos jeux de société préférés."/>
+  <div class="">
+    Bienvenue sur Game Calculator, un outil pour calculer les scores de vos jeux de société préférés.
+  </div>
 
   <div>
     <p>Choisissez un jeu pour commencer.</p>
-
-    <InputGroup label="Rechercher" name="Rechercher" class="py-2">
+    <div class="flex flex-col gap-2 mt-2">
+      <label for="searchQuery">Rechercher</label>
       <InputText v-model="searchQuery" placeholder="Rechercher un jeu..."/>
-    </InputGroup>
+    </div>
 
     <div v-if="filteredGames.length" class="pt-2 flex flex-col gap-6 w-full sm:w-auto">
       <div class="flex flex-col sm:flex-row sm:items-center gap-6">

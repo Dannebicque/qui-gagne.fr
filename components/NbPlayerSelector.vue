@@ -1,10 +1,11 @@
 <template>
-  <UFormGroup label="Nombre de joueurs" name="nbPlayers">
+  <div class="flex flex-col gap-2 mt-2">
+    <label for="nbPlayers">Nombre de joueurs</label>
     <Select
         v-model="nbPlayers" :options="players"
         @change="$emit('update:nbPlayers', nbPlayers)"
     />
-  </UFormGroup>
+  </div>
 </template>
 
 <script setup>
