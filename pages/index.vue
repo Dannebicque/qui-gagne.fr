@@ -1,7 +1,7 @@
 <template>
 
-  <div class="">
-    Bienvenue sur Game Calculator, un outil pour calculer les scores de vos jeux de société préférés.
+  <div class="text-xl">
+    Bienvenue sur <span>Qui Gagne ?</span>, un outil pour calculer les scores de vos jeux de société préférés.
   </div>
 
   <div>
@@ -11,18 +11,25 @@
       <InputText v-model="searchQuery" placeholder="Rechercher un jeu..."/>
     </div>
 
-    <div v-if="filteredGames.length" class="pt-2 flex flex-col gap-6 w-full sm:w-auto">
-      <div class="flex flex-col sm:flex-row sm:items-center gap-6">
-        <Card v-for="(game, index) in filteredGames" :key="index" v-bind="game" target="_blank">
-          <template #title>
-            <AvatarJeu :game="game"/>
-            {{ game.title }}
-          </template>
-          <template #content>
-            <span class="line-clamp-2">{{ game.description }}</span>
-          </template>
-        </Card>
-      </div>
+    <div v-if="filteredGames.length" class="mt-2 grid grid-cols-4 gap-4">
+      <router-link
+          v-for="(game, index) in filteredGames"
+          :key="index"
+          :to="game.to"
+          >
+      <Card
+          v-bind="game"
+          class="shadow-md"
+          target="_blank">
+        <template #title>
+          <AvatarJeu :game="game"/>
+          <h2>{{ game.title }}</h2>
+        </template>
+        <template #content>
+          <span class="line-clamp-2">{{ game.description }}</span>
+        </template>
+      </Card>
+      </router-link>
     </div>
     <p v-else>Aucun jeu trouvé.</p>
   </div>

@@ -7,11 +7,11 @@ import AppFooter from '~/layouts/AppFooter.vue'
     <div>
         <AppHeader />
 
-        <div class="m-5">
+        <main class="flex-grow p-4 m-5">
             <div class="p-container">
                 <slot />
             </div>
-        </div>
+        </main>
 
         <AppFooter />
     </div>
