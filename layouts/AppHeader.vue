@@ -20,13 +20,34 @@ const links = [{
 </script>
 
 <template>
-  <UHeader :links="links">
-    <template #logo>
-      Qui gagne ? <UBadge
-        label="0.1"
-        variant="subtle"
-        class="mb-0.5"
-      />
+  <Menubar :model="links">
+    <template #start>
+      <router-link to="/" class="p-mr-2">
+        Qui gagne ?
+      </router-link>
     </template>
-  </UHeader>
+    <template #item="{ item, props, hasSubmenu }">
+      <router-link v-if="item.route" v-slot="{ href, navigate }" :to="item.route" custom>
+        <a v-ripple :href="href" v-bind="props.action" @click="navigate">
+          <span :class="item.icon" />
+          <span>{{ item.label }}</span>
+        </a>
+      </router-link>
+      <a v-else v-ripple :href="item.to" :target="item.target" v-bind="props.action">
+        <span :class="item.icon" />
+        <span>{{ item.label }}</span>
+        <span v-if="hasSubmenu" class="pi pi-fw pi-angle-down" />
+      </a>
+    </template>
+  </Menubar>
+
+<!--  <UHeader :links="links">-->
+<!--    <template #logo>-->
+<!--      Qui gagne ? <UBadge-->
+<!--        label="0.1"-->
+<!--        variant="subtle"-->
+<!--        class="mb-0.5"-->
+<!--      />-->
+<!--    </template>-->
+<!--  </UHeader>-->
 </template>

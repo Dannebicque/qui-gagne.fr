@@ -1,14 +1,17 @@
 <template>
   <UFormGroup label="Nombre de joueurs" name="nbPlayers">
-    <USelect v-model="nbPlayers" :options="players"
-             @change="$emit('update:nbPlayers', nbPlayers)"
-    ></USelect>
+    <Select
+        v-model="nbPlayers" :options="players"
+        @change="$emit('update:nbPlayers', nbPlayers)"
+    />
   </UFormGroup>
 </template>
 
 <script setup>
 
 import { onMounted } from 'vue'
+
+defineEmits(['update:nbPlayers'])
 
 const props = defineProps({
   game: {
@@ -24,9 +27,9 @@ const props = defineProps({
 const players = ref([])
 const nbPlayers = ref(props.nbPlayers)
 
- onMounted(() => {
-   for (let i = props.game.min; i <= props.game.max; i++) {
-     players.value.push(i)
-   }
-  })
+onMounted(() => {
+  for (let i = props.game.min; i <= props.game.max; i++) {
+    players.value.push(i)
+  }
+})
 </script>

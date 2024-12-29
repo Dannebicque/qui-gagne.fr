@@ -7,11 +7,11 @@ import AppFooter from '~/layouts/AppFooter.vue'
     <div>
         <AppHeader />
 
-        <UMain>
-            <UContainer>
+        <div id="p-main">
+            <div class="p-container">
                 <slot />
-            </UContainer>
-        </UMain>
+            </div>
+        </div>
 
         <AppFooter />
     </div>

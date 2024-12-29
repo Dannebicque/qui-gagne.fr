@@ -43,8 +43,8 @@ watch(nbPlayers, calculHighScorePlayer)
 </script>
 
 <template>
-  <UPage v-if="error === false && game">
-    <UPageHeader
+  <div v-if="error === false && game">
+    <PageHeader
         v-if="error === false && game"
         :title="game.title"
         :description="game.description"
@@ -52,8 +52,8 @@ watch(nbPlayers, calculHighScorePlayer)
       <template #icon>
         <AvatarJeu :game="game"/>
       </template>
-    </UPageHeader>
-    <UPageBody>
+    </PageHeader>
+    <div>
       <NbPlayerSelector @update:nbPlayers="(n) => nbPlayers = n"
                         :nbPlayers="3"
                         :game="game"/>
@@ -82,10 +82,10 @@ watch(nbPlayers, calculHighScorePlayer)
           </tbody>
         </table>
       </div>
-    </UPageBody>
-  </UPage>
-  <UPage v-else>
+    </div>
+  </div>
+  <div v-else>
     Jeu non trouvé
-  </UPage>
+  </div>
 </template>
 
